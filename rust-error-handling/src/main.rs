@@ -10,6 +10,8 @@ fn error_handling_example(dir: &str) {
 
         // We can add a directory($dir) after "ls" command.
         match list_cmd.current_dir(dir).status() {
+
+            // Ok lets the command to continue
             Ok(cmd) => Some(cmd),
 
             // If error:
