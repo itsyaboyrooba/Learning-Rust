@@ -30,18 +30,18 @@ fn error_handling_example(dir: &str) {
     println!("\n\n");
 }
 
-fn error_handling_example2(dir: &str) -> Result<i32, Error> {
+fn error_handling_example2(dir: &str) -> Result<f64, Error> {
 
     println!("\n\n");
 
     let mut list_cmd = Command::new("ls");
 
-    // If you use "?" in status, you need output. We define "-> Result<i32, Error>" in function and later return "Ok(1)"
+    // If you use "?" in status, you need output. We define "-> Result<f64, Error>" in function and later return "Ok(1)"
     list_cmd.current_dir(dir).status()?;
 
     println!("\n\n");
 
-    // Return an i32
+    // Return an f64
     Ok(1)
 }
 
